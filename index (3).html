@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Edsan</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #d6f5e3;
+      text-align: center;
+      padding: 40px 20px;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #2f6652;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #444;
+    }
+
+    .question {
+      margin-top: 50px;
+      font-size: 1.4em;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      font-size: 1em;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #94d3ac;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #72ba90;
+    }
+
+    #noBtn {
+      position: absolute;
+    }
+
+    .sparkle {
+      font-size: 3em;
+      animation: sparkle 1.2s ease-in-out infinite;
+      color: #80c9ad;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkle">★</div>
+  <h1>Happy Birthday, Edsan!</h1>
+  <div class="message">
+    Happy Birthday Angry bird,<br/>
+    Aba birthday ko din ta narisau!<br/>
+    Majale bola la? Aba chai?
+  </div>
+
+  <div class="question">Fakiyeu?</div>
+  <div class="buttons">
+    <button onclick="alert('Knew it! Happy Birthday once again!')">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 100);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>
